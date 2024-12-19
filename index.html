@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- the link of css style -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- navber in bootrap -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> al sorki</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">input</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" id="procurement" style="cursor: pointer;" >Procurement </a></li>
+                  <li><a class="dropdown-item" >sales</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " id="deletAll" style="cursor:pointer;">delet all</a>
+              </li>
+            </ul>
+            <form class="d-flex" style="margin-top: 10px;">
+              <textarea type="text" class="form-control" placeholder="Search" onkeyup="secondleSearch(this.value)"id="inputSearch" style = "height:20px  ; margin : 0 5px;" ></textarea>
+              <div id="serTitle" onclick="firstsearch()" class="btn btn-outline-light "  style="margin-right: 10px; height: 40px ;">title</div>>
+              <div id="serCategory"  class="btn btn-outline-light" style="display:none ;" >category</div>>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- carousel of bootsrap -->
+      <div class="header">
+        <img src="images/vector-jan-2021-91_generated.jpg" class="d-block w-100" alt="...">
+        <div class="header-title">
+            <h1 style="color: #ff0000;">al sorki</h1>
+            <h2 >Various product management</h2>
+        </div>
+      </div>
+      <div class="inputs"  >
+        <h2 class="title"> cruds  </h2>
+        <h3 style="text-align:center; margin-bottom: 30px;"> Product management system</h3>
+        <div class="container">
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="basic-addon1">name</span>
+            <input type="text" class="form-control" placeholder="name" id="title">
+          </div>
+          
+          <div class="input-group mb-3 price" >
+            <input type="number" class="form-control" placeholder="price" id="price" onkeyup="getTotel()" >
+            <input type="number" class="form-control" placeholder="taxes" id="taxes" onkeyup="getTotel()">
+            <input type="number" class="form-control" placeholder="ads" id="ads" onkeyup="getTotel()">
+            <input type="number" class="form-control" placeholder="discount" id="discount" onkeyup="getTotel()">
+              <div class="input-group-text totle-style"> TOTLE : <span class="" id="totle"></span></div>
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text " >count</span>
+            <input type="number" id="count" class="form-control" >
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">catagory</span>
+            <input type="text" class="form-control" id="catagory">
+          </div>        
+          <button type="button" class="btn-input " style="background-color: #ff0000;" id="create"> create</button>
+        </div>
+      </div>
+      <div class="Product w-100 " style="margin-top: 50px; padding-bottom: 50px;">
+        <div class="container">
+          <h2 class="text-center"id = "titleH2" style="color: #FFF;" >card of <span style="color: #FF0000;"> product </span></h2>
+         <div class="product-card" id="inputs">
+          <table class="table table-dark table-striped table-style" style="margin-top: 30px;" >
+              <thead>
+                <tr>
+                  <th scope="col" >#</th>
+                  <th scope="col" >title</th>
+                  <th scope="col">price</th>
+                  <th scope="col" >taxes</th>
+                  <th scope="col" >ads</th>                  
+                  <th scope="col">discount</th>                  
+                  <th scope="col">totle</th>
+                  <th scope="col">catagory</th>
+                  <th scope="col">conut</th>
+                  <th scope="col">updata/delete</th>
+
+                </tr>
+              </thead>
+              <tbody id="tabla">
+                
+                
+              </tbody>
+            </table>
+         </div>
+   <!-- the src of bootstrap and  my file -->
+   <!-- <script src="js/bootstrap.bundle.js"></script> --> 
+   <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
